@@ -1,0 +1,32 @@
+html,
+body {
+
+  overflow-y: overlay;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+ .active {
+   background: #E53E3E !important;
+   color: white !important;
+   text-decoration: none;
+ }
+
+ a.social-icon {
+   border-radius: 100% !important;
+ }
+
+ a.social-icon:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(125,125,125,.75);
+}
