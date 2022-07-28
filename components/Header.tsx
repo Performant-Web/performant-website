@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
-const Links = ['Work', 'Services', 'Contact'];
+const Links = ['About', 'Work', 'Contact'];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -32,7 +32,6 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 );
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
-  console.log(colorMode)
 
   return (
     <>
