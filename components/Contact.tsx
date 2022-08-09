@@ -40,90 +40,92 @@ export default function Contact() {
           <Box>
             <Box borderRadius="lg">
               <Box color="#0B0E3F">
-                <VStack spacing={12} pb='24'>
-                  <FormControl id="name">
-                    <FormLabel
-                      color={useColorModeValue('gray.600', 'gray.300')}
-                    >Email</FormLabel>
-                    <InputGroup borderColor="#E0E1E7">
-                      <Input type="text"
+                <form id="contact-form" data-netlify='true'>
+                  <VStack spacing={12} pb='24'>
+                    <FormControl id="email">
+                      <FormLabel
+                        color={useColorModeValue('gray.600', 'gray.300')}
+                      >Email</FormLabel>
+                      <InputGroup borderColor="#E0E1E7">
+                        <Input type="text"
+                          color={useColorModeValue('gray.600', 'gray.300')}
+                          borderColor={useColorModeValue('gray.300', 'rgba(135,135,135,0.5)')}
+                          size="md"
+                          rounded='none'
+                          placeholder='Enter your email...'
+                          _focus={{
+                            borderWidth: '2px',
+                            borderColor: 'rgba(125,125,125,.75)',
+                          }} />
+                      </InputGroup>
+                    </FormControl>
+                    <FormControl id="message">
+                      <FormLabel
+                        color={useColorModeValue('gray.600', 'gray.300')}
+                      >Message</FormLabel>
+                      <Textarea
+                        height='150'
                         color={useColorModeValue('gray.600', 'gray.300')}
                         borderColor={useColorModeValue('gray.300', 'rgba(135,135,135,0.5)')}
-                        size="md"
                         rounded='none'
-                        placeholder='Enter your email...'
+                        _hover={{
+                          borderRadius: 'gray.300',
+                        }}
                         _focus={{
                           borderWidth: '2px',
                           borderColor: 'rgba(125,125,125,.75)',
-                        }} />
-                    </InputGroup>
-                  </FormControl>
-                  <FormControl id="name">
-                    <FormLabel
-                      color={useColorModeValue('gray.600', 'gray.300')}
-                    >Message</FormLabel>
-                    <Textarea
-                      height='150'
-                      color={useColorModeValue('gray.600', 'gray.300')}
-                      borderColor={useColorModeValue('gray.300', 'rgba(135,135,135,0.5)')}
-                      rounded='none'
-                      _hover={{
-                        borderRadius: 'gray.300',
-                      }}
-                      _focus={{
-                        borderWidth: '2px',
-                        borderColor: 'rgba(125,125,125,.75)',
-                      }}
-                      placeholder="Enter your message..."
-                    />
-                  </FormControl>
-                  <HStack w='full'>
-                    <FormControl id="name" float="right">
-                      <Button
-                        variant="solid"
-                        bg="red.600"
-                        px={8}
-                        py={6}
-                        letterSpacing='1px'
-                        fontWeight='600'
-                        fontSize='lg'
-                        _hover={{
-                          bg: 'red.500'
                         }}
-                        color="white"
-                        rounded='none'>
-                        Send
-                      </Button>
+                        placeholder="Enter your message..."
+                      />
                     </FormControl>
-                    <HStack
-                      mt={{ lg: 10, md: 10 }}
-                      spacing={5}
-                      alignItems="center">
-                      <Link href='https://github.com/Performant-Web'>
-                        <IconButton
-                          color={useColorModeValue('gray.700', 'gray.300')}
-                          aria-label="github"
-                          variant="ghost"
-                          size="lg"
-                          rounded='none'
-                          _hover={{ color: useColorModeValue('gray.900', 'gray.100') }}
-                          icon={<BsGithub size="28px" />}
-                        />
-                      </Link>
-                      <Link href='https://discord.com/users/895421310828695563'>
-                        <IconButton
-                          color={useColorModeValue('gray.700', 'gray.300')}
-                          aria-label="discord"
-                          variant="ghost"
-                          size="lg"
-                          rounded='none'
-                          _hover={{ color: useColorModeValue('gray.900', 'gray.100') }}
-                          icon={<BsDiscord size="28px" />}
-                        />
-                      </Link>
+                    <HStack w='full'>
+                      <FormControl id="name" float="right">
+                        <Button
+                          variant="solid"
+                          bg="red.600"
+                          px={8}
+                          py={6}
+                          letterSpacing='1px'
+                          fontWeight='600'
+                          fontSize='lg'
+                          _hover={{
+                            bg: 'red.500'
+                          }}
+                          color="white"
+                          rounded='none'>
+                          Send
+                        </Button>
+                      </FormControl>
+                      <HStack
+                        mt={{ lg: 10, md: 10 }}
+                        spacing={5}
+                        alignItems="center">
+                        <Link href='https://github.com/Performant-Web'>
+                          <IconButton
+                            color={useColorModeValue('gray.700', 'gray.300')}
+                            aria-label="github"
+                            variant="ghost"
+                            size="lg"
+                            rounded='none'
+                            _hover={{ color: useColorModeValue('gray.900', 'gray.100') }}
+                            icon={<BsGithub size="28px" />}
+                          />
+                        </Link>
+                        <Link href='https://discord.com/users/895421310828695563'>
+                          <IconButton
+                            color={useColorModeValue('gray.700', 'gray.300')}
+                            aria-label="discord"
+                            variant="ghost"
+                            size="lg"
+                            rounded='none'
+                            _hover={{ color: useColorModeValue('gray.900', 'gray.100') }}
+                            icon={<BsDiscord size="28px" />}
+                          />
+                        </Link>
+                      </HStack>
                     </HStack>
-                  </HStack>
-                </VStack>
+                  </VStack>
+                </form>
               </Box>
             </Box>
           </Box>
