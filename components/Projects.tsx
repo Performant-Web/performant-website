@@ -33,7 +33,7 @@ const Feature = ({ heading, text }: FeatureProps) => {
 export default function Projects() {
   return (
     <>
-      <Box as={Container} maxW='1080px' mt={{ base: 7, md: 14 }} px='6' pb={{ base: 12, sm: 24, md: 40 }}>
+      <Box id='work' as={Container} maxW='1080px' pt={{ base: '12', lg: '24' }} px='6' pb={{ base: 12, sm: 24, md: 40 }}>
         <Stack align='center' spacing={-1} pb={{ base: 16, md: 24 }}>
           <Text
             textTransform={'uppercase'}

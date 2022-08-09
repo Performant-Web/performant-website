@@ -12,12 +12,15 @@ import {
   Image,
   IconButton,
 } from '@chakra-ui/react';
-import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 
-const Links = ['About', 'Work', 'Contact'];
+const Links = ['about', 'work', 'contact'];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
+    textTransform='capitalize'
+    h='full'
+    zIndex='3'
     px={8}
     py={2}
     color={useColorModeValue('gray.600', 'gray.300')}
@@ -27,7 +30,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
       textDecoration: 'none',
       color: useColorModeValue('gray.900', 'gray.100'),
     }}
-    href={'#'} >
+    href={`#${children}`} >
     {children}
   </Link >
 );
@@ -85,7 +88,9 @@ export default function Header() {
             px={4}
             mr={4}
             pb={4}
-            zIndex='10'
+            zIndex='2'
+            onClick={isOpen ? onClose : onOpen}
+
             display={{ lg: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
