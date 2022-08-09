@@ -40,8 +40,12 @@ export default function Contact() {
           <Box>
             <Box borderRadius="lg">
               <Box color="#0B0E3F">
-                <form id="contact-form" data-netlify='true'>
-                  <VStack spacing={12} pb='24'>
+                <VStack spacing={12} pb='24'>
+                  <form
+                    method="POST"
+                    name="contact-form"
+                    action="contact/?success=true"
+                    data-netlify="true">
                     <FormControl id="email">
                       <FormLabel
                         color={useColorModeValue('gray.600', 'gray.300')}
@@ -81,6 +85,7 @@ export default function Contact() {
                     <HStack w='full'>
                       <FormControl id="name" float="right">
                         <Button
+                          type='submit'
                           variant="solid"
                           bg="red.600"
                           px={8}
@@ -124,8 +129,8 @@ export default function Contact() {
                         </Link>
                       </HStack>
                     </HStack>
-                  </VStack>
-                </form>
+                  </form>
+                </VStack>
               </Box>
             </Box>
           </Box>
