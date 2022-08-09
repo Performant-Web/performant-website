@@ -100,7 +100,7 @@ export default function Contact() {
                         mt={{ lg: 10, md: 10 }}
                         spacing={5}
                         alignItems="center">
-                        <Link href='https://github.com/Performant-Web'>
+                        <Link passHref href='https://github.com/Performant-Web'>
                           <IconButton
                             color={useColorModeValue('gray.700', 'gray.300')}
                             aria-label="github"
@@ -111,7 +111,7 @@ export default function Contact() {
                             icon={<BsGithub size="28px" />}
                           />
                         </Link>
-                        <Link href='https://discord.com/users/895421310828695563'>
+                        <Link passHref href='https://discord.com/users/895421310828695563'>
                           <IconButton
                             color={useColorModeValue('gray.700', 'gray.300')}
                             aria-label="discord"
