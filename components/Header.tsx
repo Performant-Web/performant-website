@@ -77,6 +77,32 @@ export default function Header() {
             </Stack>
           </Flex>
         </Flex>
+
+        {isOpen ? (
+          <Box px={4} mr={4} pb={4} display={{ lg: 'none' }}>
+            <Stack as={'nav'} spacing={4}>
+              {Links.map((link) => (
+                <NavLink key={link}>{link}</NavLink>
+              ))}
+              <Box px={4}>
+                <Button
+                  p={6}
+                  w={12}
+
+                  onClick={toggleColorMode}
+                  color={useColorModeValue('gray.600', 'gray.300')}
+                  rounded='none'
+                  bg='none'
+                  _hover={{
+                    bg: 'none',
+                    color: useColorModeValue('gray.900', 'gray.100')
+                  }}>
+                  {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+                </Button>
+              </Box>
+            </Stack>
+          </Box>
+        ) : null}
       </Box>
     </>
   );
