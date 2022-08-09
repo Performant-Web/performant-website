@@ -88,7 +88,6 @@ export default function Header() {
                 <Button
                   p={6}
                   w={12}
-
                   onClick={toggleColorMode}
                   color={useColorModeValue('gray.600', 'gray.300')}
                   rounded='none'
