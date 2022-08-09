@@ -55,7 +55,7 @@ export default function Landing() {
           Solving your business problems with technology
         </Text>
         <Stack py='3' spacing={12} direction={{ base: 'column', md: 'row' }}>
-          <Link href='#contact' passHref>
+          <Link href='#contact' passHref style={{ textDecoration: 'none' }}>
             <Button
               rounded={'none'}
               px={8}
@@ -66,7 +66,9 @@ export default function Landing() {
               color='gray.100'
               colorScheme={'red'}
               bg={'red.600'}
-              _hover={{ bg: 'red.500' }}>
+              _hover={{
+                bg: 'red.500',
+              }}>
               Get Started
             </Button>
           </Link>

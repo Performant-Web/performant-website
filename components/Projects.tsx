@@ -1,6 +1,7 @@
 import {
   Box,
   VStack,
+  HStack,
   Button,
   Flex,
   Divider,
@@ -53,7 +54,7 @@ export default function Projects() {
           }}
           gap={4}>
           <GridItem colSpan={1}>
-            <VStack alignItems="flex-start" spacing="20px">
+            <HStack alignItems="flex-start" spacing="20px">
               <chakra.h2 fontSize="3xl" fontWeight="700">
                 Pushlast
               </chakra.h2>
@@ -74,7 +75,7 @@ export default function Projects() {
                   View
                 </Button>
               </Link>
-            </VStack>
+            </HStack>
           </GridItem>
           <GridItem>
             <Flex h='full'>
@@ -119,9 +120,9 @@ export default function Projects() {
           }}
           gap={4}>
           <GridItem colSpan={1}>
-            <VStack alignItems="flex-start" spacing="20px">
+            <HStack alignItems="flex-start" spacing="20px">
               <chakra.h2 fontSize="3xl" fontWeight="700">
-                Respark Dashboard
+                Respark
               </chakra.h2>
               <Link passHref href='https://user.playrespark.com/account/login'>
                 <Button
@@ -140,7 +141,7 @@ export default function Projects() {
                   View
                 </Button>
               </Link>
-            </VStack>
+            </HStack>
           </GridItem>
           <GridItem>
             <Flex h='full'>
@@ -185,7 +186,7 @@ export default function Projects() {
           }}
           gap={4}>
           <GridItem colSpan={1}>
-            <VStack alignItems="flex-start" spacing="20px">
+            <HStack alignItems="flex-start" spacing="20px">
               <chakra.h2 fontSize="3xl" fontWeight="700">
                 Playlist Mashup
               </chakra.h2>
@@ -206,7 +207,7 @@ export default function Projects() {
                   View
                 </Button>
               </Link>
-            </VStack>
+            </HStack>
           </GridItem>
           <GridItem>
             <Flex h='full'>
