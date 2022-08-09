@@ -44,12 +44,14 @@ export default function Contact() {
                   style={{ width: '100%' }}
                   method="POST"
                   name="contact-form"
-                  data-netlify="true">
+                  data-netlify='true'
+                >
                   <FormControl id="contact" pb="8">
                     <FormLabel
                       color={useColorModeValue('gray.600', 'gray.300')}
                     >Email</FormLabel>
                     <Input type="text"
+                      name='email'
                       color={useColorModeValue('gray.600', 'gray.300')}
                       borderColor={useColorModeValue('gray.300', 'rgba(135,135,135,0.5)')}
                       size="md"
@@ -64,6 +66,7 @@ export default function Contact() {
                       color={useColorModeValue('gray.600', 'gray.300')}
                     >Message</FormLabel>
                     <Textarea
+                      name='message'
                       height='150'
                       color={useColorModeValue('gray.600', 'gray.300')}
                       borderColor={useColorModeValue('gray.300', 'rgba(135,135,135,0.5)')}
@@ -77,8 +80,9 @@ export default function Contact() {
                       }}
                       placeholder="Enter your message..."
                     />
-                    <HStack w='full' mt='8'>
+                    <HStack w='full' mt='8' display='flex' justify='space-between'>
                       <Button
+                        name='submit'
                         type='submit'
                         variant="solid"
                         bg="red.600"
