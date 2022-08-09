@@ -48,28 +48,30 @@ export default function Landing() {
           Web Development Services
         </Heading>
         <Text
-          fontSize={{ base: 'sm', sm: 'lg', md: 'xl' }}
+          fontSize={{ base: 'md', sm: 'lg', md: 'xl' }}
           color={useColorModeValue('gray.600', 'gray.300')}
           maxW={'3xl'}
           letterSpacing='0.5px' >
           Solving your business problems with technology
         </Text>
-        <Stack py={{ base: '12', lg: '3' }} spacing={12} direction={{ base: 'column', md: 'row' }}>
-          <Button
-            rounded={'none'}
-            px={8}
-            py={6}
-            letterSpacing='1px'
-            fontWeight='600'
-            fontSize='lg'
-            color='gray.100'
-            colorScheme={'red'}
-            bg={'red.600'}
-            _hover={{ bg: 'red.500' }}>
-            Get Started
-          </Button>
+        <Stack py='3' spacing={12} direction={{ base: 'column', md: 'row' }}>
+          <Link href='contact' passHref>
+            <Button
+              rounded={'none'}
+              px={8}
+              py={6}
+              letterSpacing='1px'
+              fontWeight='600'
+              fontSize='lg'
+              color='gray.100'
+              colorScheme={'red'}
+              bg={'red.600'}
+              _hover={{ bg: 'red.500' }}>
+              Get Started
+            </Button>
+          </Link>
           <Link
-            href='#services'
+            href='#about'
             passHref
             display='flex'
             justifyContent='center'

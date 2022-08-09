@@ -33,7 +33,7 @@ const Feature = ({ heading, text }: FeatureProps) => {
 export default function Projects() {
   return (
     <>
-      <Box id='work' as={Container} maxW='1080px' pt={{ base: '12', lg: '24' }} px='6' pb={{ base: 12, sm: 24, md: 40 }}>
+      <Box id='work' as={Container} maxW='1080px' pt={{ base: '12', lg: '24' }} pb={{ base: 12, sm: 24, md: 40 }}>
         <Stack align='center' spacing={-1} pb={{ base: 16, md: 24 }}>
           <Text
             textTransform={'uppercase'}
@@ -110,7 +110,7 @@ export default function Projects() {
           />
         </Grid>
       </Box>
-      <Box as={Container} maxW='1080px' mt={14} px='6' pb={{ base: 24, md: 40 }}>
+      <Box as={Container} maxW='1080px' mt={14} pb={{ base: 24, md: 40 }}>
         <Grid
           templateColumns={{
             base: 'repeat(1, 1fr)',
@@ -176,7 +176,7 @@ export default function Projects() {
           />
         </Grid>
       </Box>
-      <Box as={Container} maxW='1080px' mt={14} px='6' pb={{ base: 12, md: 20 }}>
+      <Box as={Container} maxW='1080px' mt={14} pb={{ base: 12, md: 20 }}>
         <Grid
           templateColumns={{
             base: 'repeat(1, 1fr)',
