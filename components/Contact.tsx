@@ -45,24 +45,21 @@ export default function Contact() {
                   method="POST"
                   name="contact-form"
                   data-netlify="true">
-                  <FormControl id="email" pb="8">
+                  <FormControl id="contact" pb="8">
                     <FormLabel
                       color={useColorModeValue('gray.600', 'gray.300')}
                     >Email</FormLabel>
-                    <InputGroup borderColor="#E0E1E7">
-                      <Input type="text"
-                        color={useColorModeValue('gray.600', 'gray.300')}
-                        borderColor={useColorModeValue('gray.300', 'rgba(135,135,135,0.5)')}
-                        size="md"
-                        rounded='none'
-                        placeholder='Enter your email...'
-                        _focus={{
-                          borderWidth: '2px',
-                          borderColor: 'rgba(125,125,125,.75)',
-                        }} />
-                    </InputGroup>
-                  </FormControl>
-                  <FormControl id="message" pb="8">
+                    <Input type="text"
+                      color={useColorModeValue('gray.600', 'gray.300')}
+                      borderColor={useColorModeValue('gray.300', 'rgba(135,135,135,0.5)')}
+                      size="md"
+                      rounded='none'
+                      mb='8'
+                      placeholder='Enter your email...'
+                      _focus={{
+                        borderWidth: '2px',
+                        borderColor: 'rgba(125,125,125,.75)',
+                      }} />
                     <FormLabel
                       color={useColorModeValue('gray.600', 'gray.300')}
                     >Message</FormLabel>
@@ -80,9 +77,7 @@ export default function Contact() {
                       }}
                       placeholder="Enter your message..."
                     />
-                  </FormControl>
-                  <HStack w='full'>
-                    <FormControl id="submit">
+                    <HStack w='full' mt='8'>
                       <Button
                         type='submit'
                         variant="solid"
@@ -99,35 +94,35 @@ export default function Contact() {
                         rounded='none'>
                         Send
                       </Button>
-                    </FormControl>
-                    <HStack
-                      mt={{ lg: 10, md: 10 }}
-                      spacing={5}
-                      alignItems="center">
-                      <Link passHref href='https://github.com/Performant-Web'>
-                        <IconButton
-                          color={useColorModeValue('gray.700', 'gray.300')}
-                          aria-label="github"
-                          variant="ghost"
-                          size="lg"
-                          rounded='none'
-                          _hover={{ color: useColorModeValue('gray.900', 'gray.100') }}
-                          icon={<BsGithub size="28px" />}
-                        />
-                      </Link>
-                      <Link passHref href='https://discord.com/users/895421310828695563'>
-                        <IconButton
-                          color={useColorModeValue('gray.700', 'gray.300')}
-                          aria-label="discord"
-                          variant="ghost"
-                          size="lg"
-                          rounded='none'
-                          _hover={{ color: useColorModeValue('gray.900', 'gray.100') }}
-                          icon={<BsDiscord size="28px" />}
-                        />
-                      </Link>
+                      <HStack
+                        mt={{ lg: 10, md: 10 }}
+                        spacing={5}
+                        alignItems="center">
+                        <Link passHref href='https://github.com/Performant-Web'>
+                          <IconButton
+                            color={useColorModeValue('gray.700', 'gray.300')}
+                            aria-label="github"
+                            variant="ghost"
+                            size="lg"
+                            rounded='none'
+                            _hover={{ color: useColorModeValue('gray.900', 'gray.100') }}
+                            icon={<BsGithub size="28px" />}
+                          />
+                        </Link>
+                        <Link passHref href='https://discord.com/users/895421310828695563'>
+                          <IconButton
+                            color={useColorModeValue('gray.700', 'gray.300')}
+                            aria-label="discord"
+                            variant="ghost"
+                            size="lg"
+                            rounded='none'
+                            _hover={{ color: useColorModeValue('gray.900', 'gray.100') }}
+                            icon={<BsDiscord size="28px" />}
+                          />
+                        </Link>
+                      </HStack>
                     </HStack>
-                  </HStack>
+                  </FormControl>
                 </form>
               </Box>
             </Box>
