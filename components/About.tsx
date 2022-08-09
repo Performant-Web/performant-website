@@ -1,7 +1,6 @@
 import {
   Container,
   SimpleGrid,
-  Image,
   Flex,
   Heading,
   Text,
@@ -11,9 +10,13 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import {
-  IoAnalyticsSharp,
-  IoLogoBitcoin,
-  IoSearchSharp,
+  IoHelpOutline,
+  IoSearchOutline,
+  IoBuildOutline,
+  IoFlashOutline,
+  IoLockClosedOutline,
+  IoAnalyticsOutline,
+
 } from 'react-icons/io5';
 import { ReactElement } from 'react';
 
@@ -69,19 +72,19 @@ export default function About() {
             }>
             <Service
               icon={
-                <Icon as={IoAnalyticsSharp} color={'red.500'} w={5} h={5} />
+                <Icon as={IoHelpOutline} color={'red.500'} w={5} h={5} />
               }
               iconBg={useColorModeValue('red.100', 'red.900')}
               text={'Troubleshooting + Bugfixes'}
             />
             <Service
-              icon={<Icon as={IoLogoBitcoin} color={'red.500'} w={5} h={5} />}
+              icon={<Icon as={IoSearchOutline} color={'red.500'} w={5} h={5} />}
               iconBg={useColorModeValue('red.100', 'red.900')}
               text={'Error + Uptime Monitoring'}
             />
             <Service
               icon={
-                <Icon as={IoSearchSharp} color={'red.500'} w={5} h={5} />
+                <Icon as={IoBuildOutline} color={'red.500'} w={5} h={5} />
               }
               iconBg={useColorModeValue('red.100', 'red.900')}
               text={'Package + Plugin Updates'}
@@ -102,19 +105,19 @@ export default function About() {
             }>
             <Service
               icon={
-                <Icon as={IoAnalyticsSharp} color={'red.500'} w={5} h={5} />
+                <Icon as={IoFlashOutline} color={'red.500'} w={5} h={5} />
               }
               iconBg={useColorModeValue('red.100', 'red.900')}
               text={'Performance + Optimization'}
             />
             <Service
-              icon={<Icon as={IoLogoBitcoin} color={'red.500'} w={5} h={5} />}
+              icon={<Icon as={IoLockClosedOutline} color={'red.500'} w={5} h={5} />}
               iconBg={useColorModeValue('red.100', 'red.900')}
               text={'Security + Authentication'}
             />
             <Service
               icon={
-                <Icon as={IoSearchSharp} color={'red.500'} w={5} h={5} />
+                <Icon as={IoAnalyticsOutline} color={'red.500'} w={5} h={5} />
               }
               iconBg={useColorModeValue('red.100', 'red.900')}
               text={'Analytics + Metrics'}

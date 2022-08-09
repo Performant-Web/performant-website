@@ -7,10 +7,12 @@ import {
   useColorModeValue,
   Stack,
   useColorMode,
+  useDisclosure,
   HStack,
-  Image
+  Image,
+  IconButton
 } from '@chakra-ui/react';
-import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 
 const Links = ['About', 'Work', 'Contact'];
 
@@ -32,6 +34,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 );
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
@@ -42,11 +45,19 @@ export default function Header() {
             <Box letterSpacing='-1.0px' fontSize='48' fontWeight='700'>erformant</Box>
           </Link>
           <Flex alignItems={'center'}>
+            <IconButton
+              size={'lg'}
+              rounded='none'
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+              aria-label={'Open Menu'}
+              display={{ lg: 'none' }}
+              onClick={isOpen ? onClose : onOpen}
+            />
             <Stack direction={'row'} spacing={7}>
               <HStack
                 as={'nav'}
                 spacing={8}
-                display={{ base: 'none', md: 'flex' }}>
+                display={{ base: 'none', lg: 'flex' }}>
                 {Links.map((link) => (
                   <NavLink key={link}>{link}</NavLink>
                 ))}

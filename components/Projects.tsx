@@ -121,7 +121,7 @@ export default function Projects() {
           <GridItem colSpan={1}>
             <VStack alignItems="flex-start" spacing="20px">
               <chakra.h2 fontSize="3xl" fontWeight="700">
-                Respark
+                Respark Dashboard
               </chakra.h2>
               <Link href='https://user.playrespark.com/account/login'>
                 <Button
@@ -145,7 +145,7 @@ export default function Projects() {
           <GridItem>
             <Flex h='full' align='center'>
               <chakra.p>
-                Game user interface for registration, authentication, and password reset.
+                User interface for registration, authentication, and password reset.
               </chakra.p>
             </Flex>
           </GridItem>
@@ -168,7 +168,7 @@ export default function Projects() {
           />
           <Feature
             heading={'Authentication'}
-            text={'Verified user identify with existing game database'}
+            text={'Verified user identity with existing game database'}
           />
           <Feature
             heading={'Authorization'}
@@ -243,7 +243,5 @@ export default function Projects() {
         </Grid>
       </Box>
     </>
-
-
   );
 }
