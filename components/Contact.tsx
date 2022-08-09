@@ -53,6 +53,7 @@ export default function Contact() {
                       color={useColorModeValue('gray.600', 'gray.300')}
                     >Email</FormLabel>
                     <Input type="text"
+                      id='email'
                       name='email'
                       color={useColorModeValue('gray.600', 'gray.300')}
                       borderColor={useColorModeValue('gray.300', 'rgba(135,135,135,0.5)')}
@@ -68,6 +69,7 @@ export default function Contact() {
                       color={useColorModeValue('gray.600', 'gray.300')}
                     >Message</FormLabel>
                     <Textarea
+                      id='message'
                       name='message'
                       height='150'
                       color={useColorModeValue('gray.600', 'gray.300')}
