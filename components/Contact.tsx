@@ -45,6 +45,7 @@ export default function Contact() {
                   method="POST"
                   name="performant-contact"
                   data-netlify='true'
+                  action="contact/?success=true"
                 >
                   <FormControl id="contact" pb="8">
                     <FormLabel
