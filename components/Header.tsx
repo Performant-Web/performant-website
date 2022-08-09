@@ -10,9 +10,9 @@ import {
   useDisclosure,
   HStack,
   Image,
-  IconButton
+  IconButton,
 } from '@chakra-ui/react';
-import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
+import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 const Links = ['About', 'Work', 'Contact'];
 
@@ -37,7 +37,7 @@ export default function Header() {
 
   return (
     <Box position='absolute' top={0} px={4} w='100%'>
-      <Flex position='relative' w='85%' mx='auto' h={48} alignItems='center' justifyContent='space-between'>
+      <Flex position='relative' w='85%' mx='auto' h={{ base: '24', sm: '48' }} alignItems='center' justifyContent='space-between'>
         <Link display='flex' flexDirection='row' alignItems='center' _hover={{ textDecoration: 'none', transform: 'scale(1.03, 1.03)', color: useColorModeValue('gray.700', 'gray.100') }}>
           <Image src={colorMode === 'dark' ? './logo.png' : './logo-dark.png'} h={{ base: '26px', md: '34px' }} mb={{ base: '2px', md: '-1px' }} w='auto' mr='-1px' opacity='0.93' />
           <Box letterSpacing='-1.0px' fontSize={{ base: '36', md: '48' }} fontWeight='700'>erformant</Box>
@@ -46,6 +46,7 @@ export default function Header() {
           <IconButton
             size={'lg'}
             rounded='none'
+            bg={useColorModeValue('gray.100', '#171717')}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={'Open Menu'}
             display={{ lg: 'none' }}

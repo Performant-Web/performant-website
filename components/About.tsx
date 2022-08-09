@@ -45,8 +45,8 @@ const Service = ({ text, icon, iconBg }: ServiceProps) => {
 
 export default function About() {
   return (
-    <Container maxW={'full'} px='24em' >
-      <Stack align='center' spacing={-1} pb='24'>
+    <Container maxW='1080px'>
+      <Stack align='center' mt='12' spacing={-1} pb={{ base: '16', sm: '24' }}>
         <Text
           textTransform={'uppercase'}
           color={'red.500'}
@@ -57,7 +57,7 @@ export default function About() {
         </Text>
         <Heading size='2xl'>Services</Heading>
       </Stack>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} pb={{ base: 24, md: 40 }}>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} pb={{ base: 12, sm: 24, md: 40 }}>
         <Stack spacing={4}>
           <Heading>Maintenance</Heading>
           <Text color={'gray.500'} fontSize={'lg'}>
@@ -125,6 +125,6 @@ export default function About() {
           </Stack>
         </Stack>
       </SimpleGrid>
-    </Container>
+    </Container >
   );
 }

@@ -33,8 +33,8 @@ const Feature = ({ heading, text }: FeatureProps) => {
 export default function Projects() {
   return (
     <>
-      <Box as={Container} maxW='full' mt={14} pb={{ base: 24, md: 40 }} px='24em'>
-        <Stack align='center' spacing={-1} pb='24'>
+      <Box as={Container} maxW='1080px' mt={{ base: 7, md: 14 }} px='6' pb={{ base: 12, sm: 24, md: 40 }}>
+        <Stack align='center' spacing={-1} pb={{ base: 16, md: 24 }}>
           <Text
             textTransform={'uppercase'}
             color={'red.500'}
@@ -77,7 +77,7 @@ export default function Projects() {
             </VStack>
           </GridItem>
           <GridItem>
-            <Flex h='full' align='center'>
+            <Flex h='full'>
               <chakra.p>
                 Embedded Shopify app to manage inventory based on stock status.
               </chakra.p>
@@ -98,10 +98,10 @@ export default function Projects() {
           />
           <Feature
             heading={'JWT Auth'}
-            text={'Migrated from cookie based authentication to session tokens'}
+            text={'Migrated from cookie based auth to session tokens'}
           />
           <Feature
-            heading={'Feature Flags/Toggles'}
+            heading={'Feature Flags'}
             text={'Enabled the roll-out of new features to select customers'}
           />
           <Feature
@@ -110,7 +110,7 @@ export default function Projects() {
           />
         </Grid>
       </Box>
-      <Box as={Container} maxW='full' mt={14} pb={{ base: 24, md: 40 }} px='24em'>
+      <Box as={Container} maxW='1080px' mt={14} px='6' pb={{ base: 24, md: 40 }}>
         <Grid
           templateColumns={{
             base: 'repeat(1, 1fr)',
@@ -143,7 +143,7 @@ export default function Projects() {
             </VStack>
           </GridItem>
           <GridItem>
-            <Flex h='full' align='center'>
+            <Flex h='full'>
               <chakra.p>
                 User interface for registration, authentication, and password reset.
               </chakra.p>
@@ -176,7 +176,7 @@ export default function Projects() {
           />
         </Grid>
       </Box>
-      <Box as={Container} maxW='full' mt={14} pb={{ base: 24, md: 40 }} px='24em'>
+      <Box as={Container} maxW='1080px' mt={14} px='6' pb={{ base: 12, md: 20 }}>
         <Grid
           templateColumns={{
             base: 'repeat(1, 1fr)',
@@ -209,7 +209,7 @@ export default function Projects() {
             </VStack>
           </GridItem>
           <GridItem>
-            <Flex h='full' align='center'>
+            <Flex h='full'>
               <chakra.p>
                 App that combines public Spotify playlists from different users.
               </chakra.p>
@@ -226,7 +226,7 @@ export default function Projects() {
           gap={{ base: '8', sm: '12', md: '16' }}>
           <Feature
             heading={'Next.js'}
-            text={'Next.js front end working with Spotify API'}
+            text={'Next.js front end interacting with Spotify API'}
           />
           <Feature
             heading={'Spotify REST API'}

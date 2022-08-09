@@ -21,7 +21,7 @@ import { BsGithub, BsDiscord } from 'react-icons/bs';
 
 export default function Contact() {
   return (
-    <Container maxW='full' mt={0} pb='48' centerContent overflow="hidden" px='24em'>
+    <Container h='100vh' maxW='600px' pt={{ base: '12', lg: '24' }} centerContent overflow="hidden" >
       <Stack align='center' spacing={-1} pb='24'>
         <Text
           textTransform={'uppercase'}
@@ -33,7 +33,7 @@ export default function Contact() {
         </Text>
         <Heading size='2xl'>Get in Touch</Heading>
       </Stack>
-      <Flex px='72' w='full' align='center'>
+      <Flex w='full' align='center' px='3'>
         <Box
           w='full'
           borderRadius="lg">
