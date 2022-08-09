@@ -44,10 +44,10 @@ export default function Contact() {
                   style={{ width: '100%' }}
                   method="POST"
                   name="performant-contact"
-                  data-netlify='true'
+                  data-netlify="true"
                   action="contact/?success=true"
                 >
-                  <FormControl id="contact" pb="8">
+                  <FormControl id="contact-form-control" pb="8">
                     <FormLabel
                       color={useColorModeValue('gray.600', 'gray.300')}
                     >Email</FormLabel>
