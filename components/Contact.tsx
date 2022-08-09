@@ -43,7 +43,8 @@ export default function Contact() {
                 <form
                   method="POST"
                   name="contact-form"
-                  data-netlify="true">
+                  data-netlify="true"
+                  action="#">
                   <VStack spacing={12} pb='24'>
                     <FormControl id="email">
                       <FormLabel
