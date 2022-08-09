@@ -38,6 +38,10 @@ export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  const bg = useColorModeValue('gray.100', '#171717');
+  const color = useColorModeValue('gray.600', 'gray.300');
+  const hover = useColorModeValue('gray.900', 'gray.100');
+
   return (
     <Box position='absolute' top={0} px={4} w='100%'>
       <Flex position='relative' w='85%' mx='auto' h={{ base: '24', sm: '48' }} alignItems='center' justifyContent='space-between'>
@@ -84,7 +88,7 @@ export default function Header() {
         isOpen ? (
           <Box
             position='relative'
-            bg={useColorModeValue('gray.100', '#171717')}
+            bg={bg}
             px={4}
             mr={4}
             pb={4}
@@ -100,12 +104,12 @@ export default function Header() {
                 <Button
                   p={6}
                   w={12}
-                  bg={useColorModeValue('gray.100', '#171717')}
+                  bg={bg}
                   onClick={toggleColorMode}
-                  color={useColorModeValue('gray.600', 'gray.300')}
+                  color={color}
                   rounded='none'
                   _hover={{
-                    color: useColorModeValue('gray.900', 'gray.100')
+                    color: hover
                   }}>
                   {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
                 </Button>
