@@ -40,12 +40,11 @@ export default function Contact() {
           <Box>
             <Box borderRadius="lg">
               <Box color="#0B0E3F">
-                <VStack spacing={12} pb='24'>
-                  <form
-                    method="POST"
-                    name="contact-form"
-                    action="contact/?success=true"
-                    data-netlify="true">
+                <form
+                  method="POST"
+                  name="contact-form"
+                  data-netlify="true">
+                  <VStack spacing={12} pb='24'>
                     <FormControl id="email">
                       <FormLabel
                         color={useColorModeValue('gray.600', 'gray.300')}
@@ -129,8 +128,8 @@ export default function Contact() {
                         </Link>
                       </HStack>
                     </HStack>
-                  </form>
-                </VStack>
+                  </VStack>
+                </form>
               </Box>
             </Box>
           </Box>
