@@ -7,6 +7,8 @@ import {
   Link,
   HStack,
   useColorModeValue,
+  Flex,
+  Box
 } from '@chakra-ui/react';
 import { GiGraduateCap } from 'react-icons/gi';
 import {
@@ -19,19 +21,20 @@ import {
 
 export default function Landing() {
   return (
-    <Container maxW={'5xl'}>
+    <Container h='100vh' maxW={'100%'}>
       <Stack
-        h='calc(100vh - 192px)'
+        h='100%'
         textAlign={'center'}
         align={'center'}
         spacing={{ base: 4, md: 5 }}
         pt={{ base: 20, md: 28 }}>
         <Heading
           as='h1'
+          pt='20vh'
           opacity='0.95'
           fontWeight={700}
           letterSpacing='-2px'
-          fontSize={{ base: '3xl', sm: '4xl', md: '8xl' }}
+          fontSize={{ base: '6xl', sm: '7xl', md: '8xl' }}
           lineHeight='90%'
         >
           Performant
@@ -41,13 +44,17 @@ export default function Landing() {
           color='red.500'
           fontWeight='400'
           letterSpacing='0.5px'
-          fontSize={{ base: '3xl', sm: '4xl', md: '4xl' }}>
+          fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}>
           Web Development Services
         </Heading>
-        <Text fontSize='xl' color={useColorModeValue('gray.600', 'gray.300')} maxW={'3xl'} letterSpacing='0.5px' >
-          Solving your business problems with modern technology
+        <Text
+          fontSize={{ base: 'sm', sm: 'lg', md: 'xl' }}
+          color={useColorModeValue('gray.600', 'gray.300')}
+          maxW={'3xl'}
+          letterSpacing='0.5px' >
+          Solving your business problems with technology
         </Text>
-        <Stack py='3' spacing={12} direction={'row'}>
+        <Stack py='3' spacing={12} direction={{ base: 'column', md: 'row' }}>
           <Button
             rounded={'none'}
             px={8}
@@ -84,14 +91,24 @@ export default function Landing() {
             </HStack>
           </Link>
         </Stack>
-        <HStack spacing='60' opacity='.5' h='full'>
-          <SiReact size='5em' />
-          <SiNextdotjs size='5em' />
-          <SiNodedotjs size='5em' />
-          <SiTypescript size='5em' />
-          <SiGraphql size='5em' />
-        </HStack>
-      </Stack>
+        <Flex opacity='.5' h='full' w='full' align='center' justify='space-around'>
+          <Box w={{ base: '40px', sm: '50px', md: '80px' }}>
+            <SiReact size='100%' />
+          </Box>
+          <Box w={{ base: '40px', sm: '50px', md: '80px' }}>
+            <SiNextdotjs size='100%' />
+          </Box>
+          <Box w={{ base: '40px', sm: '50px', md: '80px' }}>
+            <SiNodedotjs size='100%' />
+          </Box>
+          <Box w={{ base: '40px', sm: '50px', md: '80px' }}>
+            <SiTypescript size='100%' />
+          </Box>
+          <Box w={{ base: '40px', sm: '50px', md: '80px' }}>
+            <SiGraphql size='100%' />
+          </Box>
+        </Flex>
+      </Stack >
     </Container >
   );
 }

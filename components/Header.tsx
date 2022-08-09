@@ -26,7 +26,6 @@ const NavLink = ({ children }: { children: ReactNode }) => (
     _hover={{
       textDecoration: 'none',
       color: useColorModeValue('gray.900', 'gray.100'),
-      bg: 'none'
     }}
     href={'#'} >
     {children}
@@ -37,8 +36,8 @@ export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box px={4}>
-      <Flex w='85%' mx='auto' h={48} alignItems='center' justifyContent='space-between'>
+    <Box position='absolute' top={0} px={4} w='100%'>
+      <Flex position='relative' w='85%' mx='auto' h={48} alignItems='center' justifyContent='space-between'>
         <Link display='flex' flexDirection='row' alignItems='center' _hover={{ textDecoration: 'none', transform: 'scale(1.03, 1.03)', color: useColorModeValue('gray.700', 'gray.100') }}>
           <Image src={colorMode === 'dark' ? './logo.png' : './logo-dark.png'} h={{ base: '26px', md: '34px' }} mb={{ base: '2px', md: '-1px' }} w='auto' mr='-1px' opacity='0.93' />
           <Box letterSpacing='-1.0px' fontSize={{ base: '36', md: '48' }} fontWeight='700'>erformant</Box>
@@ -77,30 +76,38 @@ export default function Header() {
         </Flex>
       </Flex>
 
-      {isOpen ? (
-        <Box px={4} mr={4} pb={4} display={{ lg: 'none' }}>
-          <Stack as={'nav'} spacing={4}>
-            {Links.map((link) => (
-              <NavLink key={link}>{link}</NavLink>
-            ))}
-            <Box px={4}>
-              <Button
-                p={6}
-                w={12}
-                onClick={toggleColorMode}
-                color={useColorModeValue('gray.600', 'gray.300')}
-                rounded='none'
-                bg='none'
-                _hover={{
-                  bg: 'none',
-                  color: useColorModeValue('gray.900', 'gray.100')
-                }}>
-                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-              </Button>
-            </Box>
-          </Stack>
-        </Box>
-      ) : null}
-    </Box>
+      {
+        isOpen ? (
+          <Box
+            position='relative'
+            bg={useColorModeValue('gray.100', '#171717')}
+            px={4}
+            mr={4}
+            pb={4}
+            zIndex='10'
+            display={{ lg: 'none' }}>
+            <Stack as={'nav'} spacing={4}>
+              {Links.map((link) => (
+                <NavLink key={link}>{link}</NavLink>
+              ))}
+              <Box px={4}>
+                <Button
+                  p={6}
+                  w={12}
+                  bg={useColorModeValue('gray.100', '#171717')}
+                  onClick={toggleColorMode}
+                  color={useColorModeValue('gray.600', 'gray.300')}
+                  rounded='none'
+                  _hover={{
+                    color: useColorModeValue('gray.900', 'gray.100')
+                  }}>
+                  {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+                </Button>
+              </Box>
+            </Stack>
+          </Box>
+        ) : null
+      }
+    </Box >
   );
 }
