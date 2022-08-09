@@ -57,7 +57,7 @@ export default function Projects() {
               <chakra.h2 fontSize="3xl" fontWeight="700">
                 Pushlast
               </chakra.h2>
-              <Link href='https://apps.shopify.com/pushlast'>
+              <Link passHref href='https://apps.shopify.com/pushlast'>
                 <Button
                   bgColor='red.600'
                   size="md"
@@ -123,7 +123,7 @@ export default function Projects() {
               <chakra.h2 fontSize="3xl" fontWeight="700">
                 Respark Dashboard
               </chakra.h2>
-              <Link href='https://user.playrespark.com/account/login'>
+              <Link passHref href='https://user.playrespark.com/account/login'>
                 <Button
                   bgColor='red.600'
                   size="md"
@@ -189,7 +189,7 @@ export default function Projects() {
               <chakra.h2 fontSize="3xl" fontWeight="700">
                 Playlist Mashup
               </chakra.h2>
-              <Link href='http://playlistmashup.com'>
+              <Link passHref href='http://playlistmashup.com'>
                 <Button
                   bgColor='red.600'
                   size="md"

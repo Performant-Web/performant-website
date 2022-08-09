@@ -70,6 +70,7 @@ export default function Landing() {
           </Button>
           <Link
             href='#services'
+            passHref
             display='flex'
             justifyContent='center'
             alignItems='center'
