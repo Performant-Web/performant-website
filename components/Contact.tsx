@@ -43,8 +43,9 @@ export default function Contact() {
                 <form
                   style={{ width: '100%' }}
                   method="POST"
-                  name="contact-form"
+                  name="performant-contact"
                   data-netlify='true'
+                  action='#'
                 >
                   <FormControl id="contact" pb="8">
                     <FormLabel
