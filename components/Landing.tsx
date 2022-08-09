@@ -55,7 +55,7 @@ export default function Landing() {
           Solving your business problems with technology
         </Text>
         <Stack py='3' spacing={12} direction={{ base: 'column', md: 'row' }}>
-          <Link href='contact' passHref>
+          <Link href='#contact' passHref>
             <Button
               rounded={'none'}
               px={8}
