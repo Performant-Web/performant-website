@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <>
       <Head>
-        <html lang='en' />
         <title>Performant Web Development</title>
         <meta name="description" content="Performant Web Development Services. Solving your business problems with technology." />
       </Head>
