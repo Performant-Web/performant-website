@@ -9,7 +9,6 @@ import {
   useColorMode,
   useDisclosure,
   HStack,
-  Image,
   IconButton,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
@@ -46,7 +45,7 @@ export default function Header() {
   return (
     <Box position='absolute' top={0} px={4} w='100%'>
       <Flex position='relative' w='85%' mx='auto' h={{ base: '24', sm: '48' }} alignItems='center' justifyContent='space-between'>
-        <Link passHref display='flex' flexDirection='row' alignItems='center' _hover={{ textDecoration: 'none', transform: 'scale(1.03, 1.03)', color: useColorModeValue('gray.700', 'gray.100') }}>
+        <Link href='/' passHref display='flex' flexDirection='row' alignItems='center' _hover={{ textDecoration: 'none', transform: 'scale(1.03, 1.03)', color: useColorModeValue('gray.700', 'gray.100') }}>
           <Box letterSpacing='-1.0px' fontSize={{ base: '36', md: '48' }} fontWeight='700'>Performant</Box>
         </Link>
         <Flex alignItems={'center'}>
