@@ -44,13 +44,16 @@ export default function Header() {
   const hover = useColorModeValue('gray.900', 'gray.100');
 
   return (
-    <Box position='absolute' top={0} px={{ base: '3', md: '12' }} w='100%' >
+    <Box position='absolute' top={0} w='100%' bg={bg} zIndex='5'>
       <Flex position='relative' w='100%' justify='space-between' h={{ base: '24', sm: '48' }} alignItems='center' justifyContent='space-between'>
         <Link href='/' passHref display='flex' flexDirection='row' alignItems='center' _hover={{ textDecoration: 'none', transform: 'scale(1.03, 1.03)', color: useColorModeValue('gray.700', 'gray.100') }}>
-          <Box letterSpacing='-1.0px' fontSize={{ base: '36', md: '48' }} fontWeight='700'>Performant</Box>
+          <Box ml={{ base: '6', sm: '12' }} letterSpacing='-1.0px' fontSize={{ base: '36', sm: '48' }} fontWeight='700'>Performant</Box>
         </Link>
-        <Flex alignItems={'center'}>
+        <Flex
+          alignItems={'center'}
+        >
           <IconButton
+            mr={{ base: '6', sm: '12' }}
             size={'lg'}
             rounded='none'
             bg={useColorModeValue('gray.100', '#171717')}
@@ -58,8 +61,9 @@ export default function Header() {
             aria-label={'Open Menu'}
             display={{ lg: 'none' }}
             onClick={isOpen ? onClose : onOpen}
+            zIndex='5'
           />
-          <Stack direction={'row'} spacing={7}>
+          <Stack direction={'row'} spacing={7} pr={{ base: '6', sm: '12' }}>
             <HStack
               as={'nav'}
               spacing={8}
@@ -83,7 +87,6 @@ export default function Header() {
           </Stack>
         </Flex>
       </Flex>
-
       {
         isOpen ? (
           <Box
@@ -94,7 +97,6 @@ export default function Header() {
             pb={4}
             zIndex='2'
             onClick={isOpen ? onClose : onOpen}
-
             display={{ lg: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (

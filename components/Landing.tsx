@@ -23,13 +23,14 @@ export default function Landing() {
   return (
     <Container display='flex' flexDirection='column' minH='100vh' maxW='100%'>
       <Stack
-        textAlign={'center'}
-        align={'center'}
+        minH='70vh'
+        textAlign='center'
+        align='center'
+        justify='center'
         spacing={{ base: 4, md: 5 }}
-        pt={{ base: 10, md: 20 }}>
+        pt={{ base: '36', sm: '60' }}>
         <Heading
           as='h1'
-          pt='20vh'
           opacity='0.95'
           fontWeight={700}
           letterSpacing='-2px'
