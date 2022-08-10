@@ -39,7 +39,7 @@ export default function Projects() {
           <Text
             textTransform={'uppercase'}
             color={'red.500'}
-            fontWeight={600}
+            fontWeight={700}
             fontSize={'xl'}
             rounded={'md'}>
             Work
