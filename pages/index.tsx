@@ -9,7 +9,8 @@ export default function Home() {
     <>
       <Head>
         <title>Performant Web Development</title>
-        <meta></meta>
+        <meta name="description" content="Performant Web Development Services. Solving your business problems with technology." />
+
       </Head>
       <Landing />
       <About />
