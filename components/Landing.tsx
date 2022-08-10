@@ -21,9 +21,8 @@ import {
 
 export default function Landing() {
   return (
-    <Container h='100vh' maxW='100%'>
+    <Container display='flex' flexDirection='column' minH='100vh' maxW='100%'>
       <Stack
-        h='100%'
         textAlign={'center'}
         align={'center'}
         spacing={{ base: 4, md: 5 }}
@@ -96,24 +95,24 @@ export default function Landing() {
             </HStack>
           </Link>
         </Stack>
-        <Flex opacity='.5' h='full' w='full' align='center' justify='space-around'>
-          <Box w={{ base: '40px', sm: '50px', md: '75px' }}>
-            <SiReact size='100%' />
-          </Box>
-          <Box w={{ base: '40px', sm: '50px', md: '75px' }}>
-            <SiNextdotjs size='100%' />
-          </Box>
-          <Box w={{ base: '40px', sm: '50px', md: '75px' }}>
-            <SiNodedotjs size='100%' />
-          </Box>
-          <Box w={{ base: '40px', sm: '50px', md: '75px' }}>
-            <SiTypescript size='100%' />
-          </Box>
-          <Box w={{ base: '40px', sm: '50px', md: '75px' }}>
-            <SiGraphql size='100%' />
-          </Box>
-        </Flex>
       </Stack >
+      <Flex pb='6' pt='12' flexGrow='1' opacity='.5' w='full' justify='space-around'>
+        <Box w={{ base: '40px', sm: '50px', md: '75px' }}>
+          <SiReact size='100%' />
+        </Box>
+        <Box w={{ base: '40px', sm: '50px', md: '75px' }}>
+          <SiNextdotjs size='100%' />
+        </Box>
+        <Box w={{ base: '40px', sm: '50px', md: '75px' }}>
+          <SiNodedotjs size='100%' />
+        </Box>
+        <Box w={{ base: '40px', sm: '50px', md: '75px' }}>
+          <SiTypescript size='100%' />
+        </Box>
+        <Box w={{ base: '40px', sm: '50px', md: '75px' }}>
+          <SiGraphql size='100%' />
+        </Box>
+      </Flex>
     </Container >
   );
 }
