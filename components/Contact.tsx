@@ -7,12 +7,10 @@ import {
   Stack,
   IconButton,
   Button,
-  VStack,
   HStack,
   FormControl,
   FormLabel,
   Input,
-  InputGroup,
   Textarea,
   useColorModeValue
 } from '@chakra-ui/react';
@@ -26,7 +24,7 @@ export default function Contact() {
         <Text
           textTransform={'uppercase'}
           color={'red.500'}
-          fontWeight={600}
+          fontWeight={700}
           fontSize={'md'}
           rounded={'md'}>
           Contact

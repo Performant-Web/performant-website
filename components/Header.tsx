@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 import {
   Box,
-  Link,
   Flex,
   Button,
   useColorModeValue,
@@ -9,30 +8,32 @@ import {
   useColorMode,
   useDisclosure,
   HStack,
+  Link,
   IconButton,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import NextLink from 'next/link';
 
 const Links = ['about', 'work', 'contact'];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
-  <Link
-    textTransform='capitalize'
-    h='full'
-    zIndex='3'
-    px={8}
-    py={2}
-    color={useColorModeValue('gray.600', 'gray.300')}
-    fontSize='2xl'
-    letterSpacing='1px'
-    _hover={{
-      textDecoration: 'none',
-      color: useColorModeValue('gray.900', 'gray.100'),
-    }}
-    passHref
-    href={`#${children}`} >
-    {children}
-  </Link >
+  <NextLink href={`#${children}`} passHref>
+    <Link
+      textTransform='capitalize'
+      h='full'
+      zIndex='3'
+      px={8}
+      py={2}
+      color={useColorModeValue('gray.600', 'gray.300')}
+      fontSize='2xl'
+      letterSpacing='1px'
+      _hover={{
+        textDecoration: 'none',
+        color: useColorModeValue('gray.900', 'gray.100'),
+      }}>
+      {children}
+    </Link >
+  </NextLink>
 );
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
