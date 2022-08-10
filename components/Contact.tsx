@@ -61,6 +61,7 @@ export default function Contact() {
                       rounded='none'
                       mb='8'
                       placeholder='Enter your email...'
+                      _placeholder={{ color: useColorModeValue('gray.500', 'gray.400') }}
                       _focus={{
                         borderWidth: '2px',
                         borderColor: 'rgba(125,125,125,.75)',
@@ -83,6 +84,7 @@ export default function Contact() {
                         borderColor: 'rgba(125,125,125,.75)',
                       }}
                       placeholder="Enter your message..."
+                      _placeholder={{ color: useColorModeValue('gray.500', 'gray.400') }}
                     />
                     <HStack w='full' mt='8' display='flex' justify='space-between'>
                       <Button

@@ -12,7 +12,7 @@ import {
   Image,
   IconButton,
 } from '@chakra-ui/react';
-import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
+import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 const Links = ['about', 'work', 'contact'];
 

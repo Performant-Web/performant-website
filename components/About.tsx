@@ -60,7 +60,7 @@ export default function About() {
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} pb={{ base: 12, sm: 24, md: 40 }}>
         <Stack spacing={4}>
           <Heading>Maintenance</Heading>
-          <Text color={'gray.500'} fontSize={'lg'}>
+          <Text color={useColorModeValue('gray.500', 'gray.400')} fontSize={'lg'}>
             Keep things running smoothly
           </Text>
           <Stack
@@ -93,7 +93,7 @@ export default function About() {
         </Stack>
         <Stack spacing={4}>
           <Heading>Enhancement</Heading>
-          <Text color={'gray.500'} fontSize={'lg'}>
+          <Text color={useColorModeValue('gray.500', 'gray.400')} fontSize={'lg'}>
             New features or improvements
           </Text>
           <Stack
