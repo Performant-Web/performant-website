@@ -96,7 +96,7 @@ export default function Landing() {
           </Link>
         </Stack>
       </Stack >
-      <Flex pb='6' pt='12' flexGrow='1' opacity='.5' w='full' justify='space-around'>
+      <Flex pt='6' flexGrow='1' opacity='.5' w='full' justify='space-around'>
         <Box w={{ base: '40px', sm: '50px', md: '75px' }}>
           <SiReact size='100%' />
         </Box>
