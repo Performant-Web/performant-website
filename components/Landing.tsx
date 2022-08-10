@@ -34,7 +34,7 @@ export default function Landing() {
           opacity='0.95'
           fontWeight={700}
           letterSpacing='-2px'
-          fontSize={{ base: '6xl', sm: '7xl', md: '8xl' }}
+          fontSize={{ base: '6xl', sm: '8xl' }}
           lineHeight='90%'
         >
           Performant
@@ -44,7 +44,7 @@ export default function Landing() {
           color='red.500'
           fontWeight='400'
           letterSpacing='0.5px'
-          fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}>
+          fontSize={{ base: '2xl', sm: '4xl' }}>
           Web Development Services
         </Heading>
         <Text
@@ -52,7 +52,7 @@ export default function Landing() {
           color={useColorModeValue('gray.600', 'gray.300')}
           maxW={'3xl'}
           letterSpacing='0.5px' >
-          Solving your business problems with technology
+          Solving your business problems with tech
         </Text>
         <Stack py='3' spacing={12} direction={{ base: 'column', md: 'row' }}>
           <Link href='#contact' passHref style={{ textDecoration: 'none' }}>
