@@ -51,7 +51,7 @@ export default function About() {
           textTransform={'uppercase'}
           color={'red.500'}
           fontWeight={700}
-          fontSize={'md'}
+          fontSize={'lg'}
           rounded={'md'}>
           About
         </Text>
