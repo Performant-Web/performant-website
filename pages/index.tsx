@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Performant Web Development</title>
-        <meta name="description" content="Performant Web Development Services. Solving your business problems with technology." />
+        <title>Home</title>
+        <meta name="description" content="Homepage for Performant Web Development Services." />
       </Head>
       <Landing />
       <About />
