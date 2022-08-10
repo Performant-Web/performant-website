@@ -44,8 +44,8 @@ export default function Header() {
   const hover = useColorModeValue('gray.900', 'gray.100');
 
   return (
-    <Box position='absolute' top={0} px={4} w='100%'>
-      <Flex position='relative' w='85%' mx='auto' h={{ base: '24', sm: '48' }} alignItems='center' justifyContent='space-between'>
+    <Box position='absolute' top={0} px={{ base: '3', md: '12' }} w='100%' >
+      <Flex position='relative' w='100%' justify='space-between' h={{ base: '24', sm: '48' }} alignItems='center' justifyContent='space-between'>
         <Link href='/' passHref display='flex' flexDirection='row' alignItems='center' _hover={{ textDecoration: 'none', transform: 'scale(1.03, 1.03)', color: useColorModeValue('gray.700', 'gray.100') }}>
           <Box letterSpacing='-1.0px' fontSize={{ base: '36', md: '48' }} fontWeight='700'>Performant</Box>
         </Link>
