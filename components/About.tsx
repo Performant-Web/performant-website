@@ -51,7 +51,7 @@ export default function About() {
           textTransform={'uppercase'}
           color={'red.500'}
           fontWeight={600}
-          fontSize={'sm'}
+          fontSize={'md'}
           rounded={'md'}>
           About
         </Text>
@@ -60,7 +60,7 @@ export default function About() {
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} pb={{ base: 12, sm: 24, md: 40 }}>
         <Stack spacing={4}>
           <Heading>Maintenance</Heading>
-          <Text color={useColorModeValue('gray.500', 'gray.400')} fontSize={'lg'}>
+          <Text color={useColorModeValue('gray.600', 'gray.300')} fontSize={'lg'}>
             Keep things running smoothly
           </Text>
           <Stack
@@ -93,7 +93,7 @@ export default function About() {
         </Stack>
         <Stack spacing={4}>
           <Heading>Enhancement</Heading>
-          <Text color={useColorModeValue('gray.500', 'gray.400')} fontSize={'lg'}>
+          <Text color={useColorModeValue('gray.600', 'gray.300')} fontSize={'lg'}>
             New features or improvements
           </Text>
           <Stack

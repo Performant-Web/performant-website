@@ -27,7 +27,7 @@ export default function Contact() {
           textTransform={'uppercase'}
           color={'red.500'}
           fontWeight={600}
-          fontSize={'sm'}
+          fontSize={'md'}
           rounded={'md'}>
           Contact
         </Text>
