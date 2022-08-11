@@ -13,8 +13,8 @@ const focusShadow = '0 0 0 2px rgba(125,125,125,.75)'
 
 const theme = extendTheme({
   fonts: {
-    heading: 'Source Sans Pro',
-    body: 'Source Sans Pro',
+    heading: `'Source Sans Pro', sans-serif`,
+    body: `'Source Sans Pro', sans-serif`,
   },
   styles: {
     global: (props) => ({
