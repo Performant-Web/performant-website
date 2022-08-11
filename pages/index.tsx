@@ -20,7 +20,7 @@ export default function Home({ data }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
   const GET_ALL_PROJECTS = `
   query {
