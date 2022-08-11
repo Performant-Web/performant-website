@@ -3,13 +3,13 @@ import { mode } from '@chakra-ui/theme-tools'
 import Header from '../components/Header'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-
 import Script from 'next/script'
 
 //focus outline - a11y
 const focusShadow = '0 0 0 2px rgba(125,125,125,.75)'
 
 const theme = extendTheme({
+
   styles: {
     global: (props) => ({
       body: {
