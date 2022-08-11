@@ -22,7 +22,6 @@ export default function Home({ data }) {
 
 export async function getStaticProps() {
 
-  //GraphQL query
   const GET_ALL_PROJECTS = `
   query {
     allProject{
@@ -41,7 +40,6 @@ export async function getStaticProps() {
   }
 `;
 
-  //request to sanity GraphQL API
   async function gql(query: String) {
     const res = await fetch('https://dc0l7tpj.api.sanity.io/v1/graphql/production/default', {
       method: 'POST',

@@ -7,7 +7,6 @@ import '@fontsource/source-sans-pro/400.css'
 import '@fontsource/source-sans-pro/600.css'
 import '@fontsource/source-sans-pro/700.css'
 import Script from 'next/script'
-import { useState, useEffect } from 'react'
 
 //focus outline - a11y
 const focusShadow = '0 0 0 2px rgba(125,125,125,.75)'
@@ -44,13 +43,7 @@ const theme = extendTheme({
 
 function MyApp({ Component, pageProps }: AppProps) {
 
-  const [isReady, setIsReady] = useState(false);
-
-  useEffect(() => {
-    document.fonts.load("12px Source Sans Pro").then(() => setIsReady(true));
-  }, [])
-
-  return isReady && (
+  return (
     <>
       <Script id='gtag' strategy="afterInteractive" dangerouslySetInnerHTML={{
         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
