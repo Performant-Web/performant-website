@@ -45,10 +45,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=[G-R2F19FE31M]"
-      />
       <Script id='gtag' strategy="afterInteractive" dangerouslySetInnerHTML={{
         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
