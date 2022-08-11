@@ -24,7 +24,8 @@
     "**/*.ts",
     "**/*.tsx",
     "components/Posts.jsx",
-    "components/Posts.js"
+    "components/Posts.js",
+    "pages/_document.jsx"
   ],
   "exclude": [
     "node_modules"

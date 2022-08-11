@@ -54,23 +54,24 @@ export default function Landing() {
           letterSpacing='0.5px' >
           Solving your business problems with tech
         </Text>
-        <Stack py='3' spacing={12} direction={{ base: 'column', md: 'row' }}>
-          <Link href='#contact' passHref style={{ textDecoration: 'none' }}>
-            <Button
-              rounded={'none'}
-              px={8}
-              py={6}
-              letterSpacing='1px'
-              fontWeight='600'
-              fontSize='lg'
-              color='gray.100'
-              colorScheme={'red'}
-              bg={'red.600'}
-              _hover={{
-                bg: 'red.500',
-              }}>
-              Get Started
-            </Button>
+        <Stack py='3' spacing={{ base: '5', md: '12' }} direction={{ base: 'column', md: 'row' }}>
+          <Link
+            href='#contact'
+            passHref
+            style={{ textDecoration: 'none' }}
+            rounded={'none'}
+            px={8}
+            py={3}
+            letterSpacing='0.25px'
+            fontWeight='600'
+            fontSize='lg'
+            color='gray.100'
+            colorScheme={'red'}
+            bg={'red.600'}
+            _hover={{
+              bg: 'red.500',
+            }}>
+            Get Started
           </Link>
           <Link
             href='#about'
