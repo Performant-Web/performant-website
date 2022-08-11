@@ -52,7 +52,7 @@ export default function Projects({ projects }: ProjectsProps) {
 
   return (
     <>
-      <Stack align='center' spacing={-1} >
+      <Stack align='center' spacing={-1} py={{ base: '12', lg: '3' }}>
         <Text
           textTransform={'uppercase'}
           color={'red.500'}
@@ -64,7 +64,7 @@ export default function Projects({ projects }: ProjectsProps) {
         <Heading size='2xl'>Projects</Heading>
       </Stack>
       {projects.map((project, index) => (
-        <Box key={index} as={Container} maxW='1080px' pt={{ base: '12', lg: '24' }} pb={{ base: 12, sm: 24 }}>
+        <Box key={index} as={Container} maxW='1080px' py={{ base: '12', lg: '24' }} pb={{ base: 12, sm: 24 }}>
           <Grid
             templateColumns={{
               base: 'repeat(1, 1fr)',
