@@ -46,7 +46,7 @@ const Service = ({ text, icon, iconBg }: ServiceProps) => {
 export default function About() {
   return (
     <Container id='about' maxW='1080px' pt={{ base: '12', lg: '24' }}>
-      <Stack align='center' spacing={-1} pb={{ base: '16', sm: '24' }}>
+      <Stack align='center' spacing={-1} pb={{ base: '16', md: '24' }}>
         <Text
           textTransform={'uppercase'}
           color={'red.500'}

@@ -34,7 +34,7 @@ export default function Landing() {
           opacity='0.95'
           fontWeight={700}
           letterSpacing='-2px'
-          fontSize={{ base: '6xl', sm: '8xl' }}
+          fontSize={{ base: '6xl', md: '8xl' }}
           lineHeight='90%'
         >
           Performant

@@ -52,7 +52,7 @@ export default function Projects({ projects }: ProjectsProps) {
 
   return (
     <Box id='work' pt='24'>
-      <Stack align='center' spacing={-1} >
+      <Stack align='center' pb={{ base: '6', md: '0' }} spacing={-1} >
         <Text
           textTransform={'uppercase'}
           color={'red.500'}
