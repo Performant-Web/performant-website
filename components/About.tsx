@@ -57,7 +57,7 @@ export default function About() {
         </Text>
         <Heading size='2xl'>Services</Heading>
       </Stack>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} pb={{ base: 12, sm: 24, md: 40 }}>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} pb={{ base: 12, sm: 24 }}>
         <Stack spacing={4}>
           <Heading>Maintenance</Heading>
           <Text color={useColorModeValue('gray.600', 'gray.300')} fontSize={'lg'}>

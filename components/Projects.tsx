@@ -51,8 +51,8 @@ interface ProjectsProps {
 export default function Projects({ projects }: ProjectsProps) {
 
   return (
-    <>
-      <Stack align='center' spacing={-1} py={{ base: '12', lg: '3' }}>
+    <Box id='work' pt='24'>
+      <Stack align='center' spacing={-1} >
         <Text
           textTransform={'uppercase'}
           color={'red.500'}
@@ -131,6 +131,6 @@ export default function Projects({ projects }: ProjectsProps) {
           </Grid>
         </Box>
       ))}
-    </>
+    </Box>
   );
 }
