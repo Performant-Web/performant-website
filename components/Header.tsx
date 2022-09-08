@@ -71,9 +71,9 @@ export default function Header() {
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
-              <Link
+              <Button
                 px={6}
-                pb='1px'
+                pt={1}
                 onClick={toggleColorMode}
                 color={useColorModeValue('gray.600', 'gray.300')}
                 rounded='none'
@@ -83,7 +83,7 @@ export default function Header() {
                   color: useColorModeValue('gray.900', 'gray.100')
                 }}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-              </Link>
+              </Button>
             </HStack>
           </Stack>
         </Flex>
@@ -103,10 +103,9 @@ export default function Header() {
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
-              <Box px={6}>
-                <Link
-                  p={3}
-                  w={12}
+              <Box>
+                <Button
+                  ml={4}
                   display='block'
                   bg={bg}
                   onClick={toggleColorMode}
@@ -116,7 +115,7 @@ export default function Header() {
                     color: hover
                   }}>
                   {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-                </Link>
+                </Button>
               </Box>
             </Stack>
           </Box>
