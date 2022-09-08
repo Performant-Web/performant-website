@@ -72,8 +72,8 @@ export default function Header() {
                 <NavLink key={link}>{link}</NavLink>
               ))}
               <Button
-                px={6}
-                pt={1}
+                p={6}
+                pt={7}
                 onClick={toggleColorMode}
                 color={useColorModeValue('gray.600', 'gray.300')}
                 rounded='none'
