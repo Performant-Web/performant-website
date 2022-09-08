@@ -46,8 +46,8 @@ export default function Header() {
   return (
     <Box position='absolute' top={0} w='100%' bg={bg} zIndex='5'>
       <Flex position='relative' w='100%' justify='space-between' h={{ base: '24', sm: '48' }} alignItems='center' justifyContent='space-between'>
-        <Link href='/' passHref display='flex' flexDirection='row' alignItems='center' _hover={{ textDecoration: 'none', transform: 'scale(1.03, 1.03)', color: useColorModeValue('gray.700', 'gray.100') }}>
-          <Box ml={{ base: '6', sm: '12' }} letterSpacing='-1.0px' fontSize={{ base: '36', sm: '48' }} fontWeight='700'>Performant</Box>
+        <Link ml={{ base: '3', sm: '6' }} px={{ base: '3', sm: '6' }} href='/' passHref display='flex' flexDirection='row' alignItems='center' _hover={{ textDecoration: 'none', transform: 'scale(1.03, 1.03)', color: useColorModeValue('gray.700', 'gray.100') }}>
+          <Box letterSpacing='-1.0px' fontSize={{ base: '36', sm: '48' }} fontWeight='700'>Performant</Box>
         </Link>
         <Flex
           alignItems={'center'}
