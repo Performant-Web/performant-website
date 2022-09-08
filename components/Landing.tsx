@@ -3,7 +3,6 @@ import {
   Heading,
   Stack,
   Text,
-  Button,
   Link,
   HStack,
   useColorModeValue,

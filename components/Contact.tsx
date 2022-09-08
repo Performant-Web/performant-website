@@ -15,7 +15,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react';
 import Link from 'next/link';
-import { BsGithub, BsDiscord } from 'react-icons/bs';
+import { BsGithub, BsDiscord, BsTwitter } from 'react-icons/bs';
 
 export default function Contact() {
   return (
@@ -126,6 +126,17 @@ export default function Contact() {
                             rounded='none'
                             _hover={{ color: useColorModeValue('gray.900', 'gray.100') }}
                             icon={<BsDiscord size="28px" />}
+                          />
+                        </Link>
+                        <Link passHref href='https://twitter.com/PerformantWeb'>
+                          <IconButton
+                            color={useColorModeValue('gray.700', 'gray.300')}
+                            aria-label="twitter"
+                            variant="ghost"
+                            size="lg"
+                            rounded='none'
+                            _hover={{ color: useColorModeValue('gray.900', 'gray.100') }}
+                            icon={<BsTwitter size="28px" />}
                           />
                         </Link>
                       </HStack>
