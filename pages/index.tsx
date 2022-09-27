@@ -9,7 +9,7 @@ export default function Home({ data }) {
   return (
     <>
       <Head>
-        <title>Performant Web Development</title>
+        <title>Performant</title>
         <meta name="description" content="Performant Web Development Services. Solving your business problems with technology." />
       </Head>
       <Landing />
