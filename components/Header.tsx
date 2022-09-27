@@ -11,7 +11,8 @@ import {
   Link,
   IconButton,
 } from '@chakra-ui/react';
-import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { TbMoon } from 'react-icons/tb';
 import NextLink from 'next/link';
 
 const Links = ['about', 'work', 'contact'];
@@ -44,9 +45,9 @@ export default function Header() {
   const hover = useColorModeValue('gray.900', 'gray.100');
 
   return (
-    <Box position='absolute' top={0} w='100%' bg={bg} zIndex='5'>
+    <Box position='absolute' left='0' right='0' top={0} maxW='1456px' mx='auto' bg={bg} zIndex='5'>
       <Flex position='relative' w='100%' justify='space-between' h={{ base: '24', sm: '48' }} alignItems='center' justifyContent='space-between'>
-        <Link ml={{ base: '3', sm: '6' }} px={{ base: '3', sm: '6' }} href='/' passHref display='flex' flexDirection='row' alignItems='center' _hover={{ textDecoration: 'none', transform: 'scale(1.03, 1.03)', color: useColorModeValue('gray.700', 'gray.100') }}>
+        <Link pl={{ base: '5', sm: '8', md: '4', xl: '-10px' }} ml={{ base: '0px', xl: '-10px' }} href='/' passHref display='flex' flexDirection='row' alignItems='center' _hover={{ textDecoration: 'none', color: useColorModeValue('gray.700', 'gray.100') }}>
           <Box letterSpacing='-1.0px' fontSize={{ base: '36', sm: '48' }} fontWeight='700'>Performant</Box>
         </Link>
         <Flex
@@ -63,17 +64,15 @@ export default function Header() {
             onClick={isOpen ? onClose : onOpen}
             zIndex='5'
           />
-          <Stack direction={'row'} spacing={7} pr={{ base: '6', sm: '12' }}>
+          <Stack direction={'row'}>
             <HStack
               as={'nav'}
-              spacing={8}
+              spacing={0}
               display={{ base: 'none', lg: 'flex' }}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
               <Button
-                p={6}
-                pt={7}
+                w='52px'
+                h='52px'
+                p='3'
                 onClick={toggleColorMode}
                 color={useColorModeValue('gray.600', 'gray.300')}
                 rounded='none'
@@ -82,8 +81,28 @@ export default function Header() {
                   bg: 'none',
                   color: useColorModeValue('gray.900', 'gray.100')
                 }}>
-                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+                {colorMode === 'light' ? <TbMoon size='100%' /> : <SunIcon h='24px' w='24px' />}
               </Button>
+              {Links.map((link) => (
+                <NavLink key={link}>{link}</NavLink>
+              ))}
+              <NextLink href={'https://blog.performantweb.dev'} passHref>
+                <Link
+                  textTransform='capitalize'
+                  h='full'
+                  zIndex='3'
+                  px={8}
+                  py={2}
+                  color={useColorModeValue('gray.600', 'gray.300')}
+                  fontSize='2xl'
+                  letterSpacing='1px'
+                  _hover={{
+                    textDecoration: 'none',
+                    color: useColorModeValue('gray.900', 'gray.100'),
+                  }}>
+                  Blog
+                </Link >
+              </NextLink>
             </HStack>
           </Stack>
         </Flex>
@@ -114,7 +133,7 @@ export default function Header() {
                   _hover={{
                     color: hover
                   }}>
-                  {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+                  {colorMode === 'light' ? <TbMoon size='75%' /> : <SunIcon />}
                 </Button>
               </Box>
             </Stack>
