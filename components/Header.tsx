@@ -46,9 +46,9 @@ export default function Header() {
 
   return (
     <Box position='absolute' left='0' right='0' top={0} maxW='1456px' mx='auto' bg={bg} zIndex='5'>
-      <Flex pr={{ base: '0', xl: '4' }} position='relative' w='100%' justify='space-between' h={{ base: '24', sm: '48' }} alignItems='center' justifyContent='space-between'>
-        <Link pl={{ base: '5', sm: '8' }} ml={{ base: '0px', lg: '-10px' }} href='/' passHref display='flex' flexDirection='row' alignItems='center' _hover={{ textDecoration: 'none', color: useColorModeValue('gray.700', 'gray.100') }}>
-          <Box pr='8' letterSpacing='-1.0px' fontSize={{ base: '36', sm: '48' }} fontWeight='700'>Performant</Box>
+      <Flex pr={{ base: '0', lg: '4' }} position='relative' w='100%' justify='space-between' h={{ base: '24', sm: '48' }} alignItems='center' justifyContent='space-between'>
+        <Link pr='10' pl={{ base: '6', sm: '10' }} ml={{ base: '0px', lg: '-10px' }} href='/' passHref display='flex' flexDirection='row' alignItems='center' _hover={{ textDecoration: 'none', color: useColorModeValue('gray.700', 'gray.100') }}>
+          <Box letterSpacing='-1.0px' fontSize={{ base: '36', sm: '48' }} fontWeight='700'>Performant</Box>
         </Link>
         <Flex
           alignItems={'center'}
