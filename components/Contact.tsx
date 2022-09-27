@@ -128,7 +128,7 @@ export default function Contact() {
                             icon={<BsDiscord size="28px" />}
                           />
                         </Link>
-                        <Link passHref href='https://twitter.com/PerformantWeb'>
+                        {/*<Link passHref href='https://twitter.com/PerformantWeb'>
                           <IconButton
                             color={useColorModeValue('gray.700', 'gray.300')}
                             aria-label="twitter"
@@ -138,7 +138,7 @@ export default function Contact() {
                             _hover={{ color: useColorModeValue('gray.900', 'gray.100') }}
                             icon={<BsTwitter size="28px" />}
                           />
-                        </Link>
+                      </Link>*/}
                       </HStack>
                     </HStack>
                   </FormControl>
