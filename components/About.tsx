@@ -38,36 +38,37 @@ const Service = ({ text, icon, iconBg }: ServiceProps) => {
         bg={iconBg}>
         {icon}
       </Flex>
-      <Text fontWeight={600}>{text}</Text>
+      <Text fontSize="lg" fontWeight={600}>{text}</Text>
     </Stack>
   );
 };
 
 export default function About() {
   return (
-    <Container id='about' maxW='1080px' pt={{ base: '12', lg: '24' }}>
+    <Container id='about' maxW='1456px' pt={{ base: '12', lg: '24' }}>
       <Stack align='center' spacing={-1} pb={{ base: '16', md: '24' }}>
         <Text
           textTransform={'uppercase'}
           color={'red.500'}
           fontWeight={700}
-          fontSize={'xl'}
+          fontSize={'2xl'}
           rounded={'md'}>
           About
         </Text>
-        <Heading size='2xl'>Services</Heading>
+        <Heading size='3xl'>Services</Heading>
       </Stack>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} pb={{ base: 12, sm: 24 }}>
         <Stack spacing={4}>
-          <Heading>Maintenance</Heading>
-          <Text color={useColorModeValue('gray.600', 'gray.300')} fontSize={'lg'}>
-            Keep things running smoothly
+          <Heading as="h3" size="xl">Maintenance</Heading>
+          <Text color={useColorModeValue('gray.600', 'gray.300')} fontSize={'xl'}>
+            Keep everything running smoothly
           </Text>
           <Stack
             spacing={4}
             divider={
               <StackDivider
-                borderColor={useColorModeValue('gray.100', 'gray.700')}
+                opacity="0.75"
+                borderColor={useColorModeValue('gray.300', 'gray.600')}
               />
             }>
             <Service
@@ -75,52 +76,52 @@ export default function About() {
                 <Icon as={IoHelpOutline} color={'red.500'} w={5} h={5} />
               }
               iconBg={useColorModeValue('red.100', 'red.900')}
-              text={'Troubleshooting + Bugfixes'}
-            />
-            <Service
-              icon={<Icon as={IoSearchOutline} color={'red.500'} w={5} h={5} />}
-              iconBg={useColorModeValue('red.100', 'red.900')}
-              text={'Error + Uptime Monitoring'}
-            />
-            <Service
-              icon={
-                <Icon as={IoBuildOutline} color={'red.500'} w={5} h={5} />
-              }
-              iconBg={useColorModeValue('red.100', 'red.900')}
-              text={'Package + Plugin Updates'}
-            />
-          </Stack>
-        </Stack>
-        <Stack spacing={4}>
-          <Heading>Enhancement</Heading>
-          <Text color={useColorModeValue('gray.600', 'gray.300')} fontSize={'lg'}>
-            New features or improvements
-          </Text>
-          <Stack
-            spacing={4}
-            divider={
-              <StackDivider
-                borderColor={useColorModeValue('gray.100', 'gray.700')}
-              />
-            }>
-            <Service
-              icon={
-                <Icon as={IoFlashOutline} color={'red.500'} w={5} h={5} />
-              }
-              iconBg={useColorModeValue('red.100', 'red.900')}
-              text={'Performance + Optimization'}
-            />
-            <Service
-              icon={<Icon as={IoLockClosedOutline} color={'red.500'} w={5} h={5} />}
-              iconBg={useColorModeValue('red.100', 'red.900')}
-              text={'Security + Authentication'}
+              text={'Testing, Troubleshooting and Debugging'}
             />
             <Service
               icon={
                 <Icon as={IoAnalyticsOutline} color={'red.500'} w={5} h={5} />
               }
               iconBg={useColorModeValue('red.100', 'red.900')}
-              text={'Analytics + Metrics'}
+              text={'Analytics, Metrics, and Monitoring'}
+            />
+            <Service
+              icon={
+                <Icon as={IoBuildOutline} color={'red.500'} w={5} h={5} />
+              }
+              iconBg={useColorModeValue('red.100', 'red.900')}
+              text={'Updating Packages and Plugins '}
+            />
+          </Stack>
+        </Stack>
+        <Stack spacing={4}>
+          <Heading>Enhancement</Heading>
+          <Text color={useColorModeValue('gray.600', 'gray.300')} fontSize={'xl'}>
+            New features and improvements
+          </Text>
+          <Stack
+            spacing={4}
+            divider={
+              <StackDivider
+                opacity="0.75"
+                borderColor={useColorModeValue('gray.300', 'gray.600')}              />
+            }>
+            <Service
+              icon={
+                <Icon as={IoFlashOutline} color={'red.500'} w={5} h={5} />
+              }
+              iconBg={useColorModeValue('red.100', 'red.900')}
+              text={'Development of Components and Pages'}
+            />
+            <Service
+              icon={<Icon as={IoLockClosedOutline} color={'red.500'} w={5} h={5} />}
+              iconBg={useColorModeValue('red.100', 'red.900')}
+              text={'Performance and Optimization'}
+            />
+            <Service
+              icon={<Icon as={IoSearchOutline} color={'red.500'} w={5} h={5} />}
+              iconBg={useColorModeValue('red.100', 'red.900')}
+              text={'Deployment and Continuous Integration'}
             />
           </Stack>
         </Stack>

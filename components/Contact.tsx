@@ -19,17 +19,17 @@ import { BsGithub, BsDiscord, BsTwitter } from 'react-icons/bs';
 
 export default function Contact() {
   return (
-    <Container id='contact' minH='100vh' maxW='600px' pt={{ base: '12', lg: '24' }} centerContent overflow="hidden" >
+    <Container id='contact' maxW='600px' pt={{ base: '12', lg: '24' }} minH="95vh" centerContent overflow="hidden" >
       <Stack align='center' spacing={-1} pb={{ base: '12', md: '20' }}>
         <Text
           textTransform={'uppercase'}
           color={'red.500'}
           fontWeight={700}
-          fontSize={'xl'}
+          fontSize={'2xl'}
           rounded={'md'}>
           Contact
         </Text>
-        <Heading size='2xl'>Get in Touch</Heading>
+        <Heading size='3xl'>Get in Touch</Heading>
       </Stack>
       <Flex w='full' align='center' px='3'>
         <Box

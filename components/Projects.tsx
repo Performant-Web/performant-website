@@ -25,14 +25,14 @@ const Feature = ({ heading, text }: FeatureProps) => {
       <chakra.h3 fontSize="xl" fontWeight="600">
         {heading}
       </chakra.h3>
-      <chakra.p>{text}</chakra.p>
+      <chakra.p fontSize="lg" opacity="0.95">{text}</chakra.p>
     </GridItem>
   );
 };
 
 interface Project {
   title: string
-  url: URL
+  url: string
   description: string
   tech1: string
   tech1Description: string
@@ -44,27 +44,22 @@ interface Project {
   tech4Description: string
 }
 
-interface ProjectsProps {
-  projects: Array<Project>;
-}
-
-export default function Projects({ projects }: ProjectsProps) {
-
+export default function Projects({ projects }: {projects: Project[]}) {
   return (
     <Box id='work' pt='24'>
-      <Stack align='center' pb={{ base: '6', md: '0' }} spacing={-1} >
+      <Stack align='center' pb={{ base: '6', md: '0' }} pt={{base: '12', md: '24'}} spacing={-1} >
         <Text
           textTransform={'uppercase'}
           color={'red.500'}
           fontWeight={700}
-          fontSize={'xl'}
+          fontSize={'2xl'}
           rounded={'md'}>
           Work
         </Text>
-        <Heading size='2xl'>Projects</Heading>
+        <Heading size='3xl'>Projects</Heading>
       </Stack>
       {projects.map((project, index) => (
-        <Box key={index} as={Container} maxW='1080px' py={{ base: '12', lg: '24' }} pb={{ base: 12, sm: 24 }}>
+        <Box key={index} as={Container} maxW='1456' py={{ base: '12', lg: '24' }} pb={{ base: 12, sm: 24 }}>
           <Grid
             templateColumns={{
               base: 'repeat(1, 1fr)',
@@ -73,8 +68,8 @@ export default function Projects({ projects }: ProjectsProps) {
             }}
             gap={4}>
             <GridItem colSpan={1}>
-              <HStack alignItems="flex-start" spacing="20px">
-                <chakra.h2 fontSize="3xl" fontWeight="700">
+              <HStack alignItems="center" spacing="20px">
+                <chakra.h2 fontSize="4xl" fontWeight="700">
                   {project.title}
                 </chakra.h2>
                 <Link passHref href={project.url}>
@@ -86,6 +81,7 @@ export default function Projects({ projects }: ProjectsProps) {
                     rounded='none'
                     px={4}
                     py={3}
+                    borderRadius="2px"
                     letterSpacing='1px'
                     fontWeight='600'
                     fontSize='md'
@@ -97,14 +93,14 @@ export default function Projects({ projects }: ProjectsProps) {
               </HStack>
             </GridItem>
             <GridItem>
-              <Flex h='full'>
-                <chakra.p>
+              <Flex h='full' alignItems="center">
+                <chakra.p fontSize="20px" fontWeight="600">
                   {project.description}
                 </chakra.p>
               </Flex>
             </GridItem>
           </Grid>
-          <Divider mt={12} mb={12} />
+          <Divider mt='9' mb='9'/>
           <Grid
             templateColumns={{
               base: 'repeat(1, 1fr)',

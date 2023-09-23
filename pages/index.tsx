@@ -1,5 +1,6 @@
 import Landing from '../components/Landing'
 import About from '../components/About'
+import Tech from '../components/Tech'
 import Projects from '../components/Projects'
 import Contact from '../components/Contact'
 import Head from 'next/head'
@@ -9,12 +10,13 @@ export default function Home({ data }) {
   return (
     <>
       <Head>
-        <title>Performant</title>
+        <title>Performant Web Development</title>
         <meta name="description" content="Performant Web Development Services. Solving your business problems with technology." />
       </Head>
       <Landing />
       <About />
-      <Projects projects={data} />
+      <Tech />
+      <Projects projects={data}/>
       <Contact />
     </>
   );
@@ -54,7 +56,7 @@ export async function getStaticProps() {
   }
 
   const response = await gql(GET_ALL_PROJECTS)
-  const projects = response.data.allProject
+  const projects = response.data.allProject.reverse()
 
   return {
     props: {
